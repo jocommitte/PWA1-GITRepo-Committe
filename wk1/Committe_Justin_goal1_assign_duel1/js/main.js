@@ -14,8 +14,8 @@ Justin Committe
     var peter = "Peter";
 
     //This represents my players damage
-    var homerDamage = 25;
-    var peterDamage = 25;
+    var homerDamage = 15;
+    var peterDamage = 15;
 
     //This is my players health
     var homerHealth = 100;
@@ -26,7 +26,7 @@ Justin Committe
 
     function fight(){//this is my fight function containing all the fight code
         alert(homer + ":" + homerHealth + "  *START*   " + peter + ":" + peterHealth);//alert box that starts the for loop and thus the fight
-        for (var i = 0; i < 10; i++){//for loop that counts up to ten meaning there are ten total rounds
+        for (var i = 1; i < 11; i++){//for loop that counts up to ten meaning there are ten total rounds
 
             var homerMinDam = homerDamage *.5;//player one minimum damage is half of his damage
             var peterMinDam = peterDamage *.5;//player two minimum damage is half of his total damage
