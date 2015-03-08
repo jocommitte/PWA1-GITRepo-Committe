@@ -38,11 +38,36 @@ Justin Committe
             peterHealth = peterHealth - homerShot;//each shot peter's health goes down by the amount of homer's random shot
 
             //console out the new Health's
-            console.log(homer + ": " + homerHealth + "")
+            console.log(homer + ": " + homerHealth + " " + peter + ": " + peterHealth);//new health each round
+
+            //check to see if there is a winner
+            var result = winnerCheck(); //make a variable to hold the winner check function
+            console.log(result);//print out the results
+
+            if( result === "no winner"){//if the function returns no winner
+                //run this code
+                //round++;//add one to the round so we can progress
+                alert( homer + ": " + homerHealth + "  *ROUND " + i + " Over*" + peter + ": " + peterHealth);//tells user the name's their health and the round as it progresses i used for round
+
+            }else{//if the result isn't no winner run this code
+                alert(result);//alert out the results
+                break;//use this to jump out if there is a winner
+            }
 
         }
 
 
     }
-
+    function winnerCheck(){//my function for what is printed every round and to see if health is less than one
+         var result = "no winner";//this is is string for if there is no winner
+        if(homerHealth < 1 && peterHealth < 1){//if both players health is below one then run this code
+            result = 'Both are dead';//comes back if both are less than one
+        }else if(homerHealth <1){//or if homer's health is less than one run this
+            result = peter + " Wins!!";//result = player twos name plus wins
+        }else if(peterHealth < 1){//or if peter's health is less than one
+            result = homer + " Wins!!";//result equals player ones name plus wins
+        }
+        return result;//return the results of these if else statements
+    }
+    //now we start the program by calling the fight function
 })();
