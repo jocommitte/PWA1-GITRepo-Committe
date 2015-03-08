@@ -70,4 +70,5 @@ Justin Committe
         return result;//return the results of these if else statements
     }
     //now we start the program by calling the fight function
+    fight();
 })();
