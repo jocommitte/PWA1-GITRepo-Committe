@@ -6,8 +6,7 @@ March 8, 2015
 
 
 // Create privatized scope using a self-executing function
-(function(){
-	
+(function (){
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
 	var resultsDIV = document.getElementById("results"),
 		searchInput = document.forms[0].search,
@@ -18,7 +17,7 @@ March 8, 2015
 	var validqte = function(query){//assignment operator needed
 		
 		// Trim whitespace from start and end of search query
-		while(query.charAt(0) == " "){//need another equals sign
+		while(query.charAt(0) === " "){//need another equals sign
 			query = query.substring(1, query.length);
 		};
 		while(query.charAt(query.length-1) === "") {
@@ -54,7 +53,7 @@ March 8, 2015
             var dbTitleEnd = db[i].indexOf('|');
             var dbItem = db[i].toLowerCase().substring(0, dbTitleEnd);
 
-            console.log('start of search')
+            console.log('start of search');
 
             // loop through the user's search query words
             // save a lowercase variable of the search keyword
@@ -108,7 +107,7 @@ March 8, 2015
 			// title of video ends with pipe
 			// pull the title's string using index numbers
 			titleEnd = results[i].indexOf('|');//no initializing of variable?
-			title = results[i].subString(0, titleEnd);
+			title = results[i].substring(0, titleEnd);
 			
 			// pull the video url after the title
 			url = results[i].substring(results[i].indexOf('|')+1, results[i].length);//
